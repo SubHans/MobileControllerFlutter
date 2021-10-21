@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_controller/home_page.dart';
 import 'package:mobile_controller/login_page.dart';
 
 void main() {
