@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_controller/login_page.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({ Key? key }) : super(key: key);
@@ -6,31 +7,64 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Image.asset(
-            'images/logo.png',
-            height: 100,
-            width: 75,
+      body: SafeArea(
+        child: Container(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(
+                  top: 120,
+                ),
+                child: Image.asset(
+                  'images/logo.png',
+                  height: 200,
+                  width: 200,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                  top: 20,
+                  bottom: 20
+                ),
+                child: TextField(
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Username'
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                  bottom: 20
+                ),
+                child: TextField(
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Password'
+                  ),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: null,
+                child: const Text('Register'),
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => new LoginPage(),
+                    )
+                  );
+                },
+                child: Text(
+                  'Already have an account? Login'
+                  ),
+                ),
+            ],
           ),
-          TextField(
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Username'
-            ),
-          ),
-          TextField(
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Password'
-            ),
-          ),
-          ElevatedButton(
-            onPressed: null,
-            child: const Text('Register'),
-          ),
-          Text('Already have an account? Login'),
-        ],
+        ),
       ),
     );
   }
