@@ -9,12 +9,12 @@ class RegisterPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
               Container(
                 margin: EdgeInsets.only(
-                  top: 120,
+                  top: 110,
                 ),
                 child: Image.asset(
                   'images/logo.png',
@@ -58,10 +58,23 @@ class RegisterPage extends StatelessWidget {
                     )
                   );
                 },
-                child: Text(
-                  'Already have an account? Login'
+                child: RichText(
+                  text: TextSpan(
+                    text: 'Already Have an Account? ',
+                    style: TextStyle(
+                      color : Colors.black,
+                    ),
+                    children: const <TextSpan>[
+                      TextSpan(
+                        text: 'Login', 
+                        style: TextStyle(
+                          color : Colors.blue,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
+              ),
             ],
           ),
         ),
