@@ -10,12 +10,12 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
               Container(
                 margin: EdgeInsets.only(
-                  top: 120,
+                  top: 110,
                 ),
                 child: Image.asset(
                   'images/logo.png',
@@ -65,11 +65,24 @@ class LoginPage extends StatelessWidget {
                       builder: (context) => new RegisterPage(),
                     )
                   );
-              },
-                child: Text(
-                  'Dont have an account? Register'
+                },
+                child: RichText(
+                  text: TextSpan(
+                    text: 'Dont Have an Account? ',
+                    style: TextStyle(
+                      color : Colors.black,
+                    ),
+                    children: const <TextSpan>[
+                      TextSpan(
+                        text: 'Register', 
+                        style: TextStyle(
+                          color : Colors.blue,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
+              ),
             ],
           ),
         ),
