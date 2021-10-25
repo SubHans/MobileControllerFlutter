@@ -39,7 +39,7 @@ class ViewDataPage extends StatelessWidget {
                             child: Row(
                               children: <Widget>[
                                 Image.asset(
-                                  'images/remote.png',
+                                  'images/thermometer.png',
                                   height: 40,
                                   width: 40,
                                 ),
@@ -63,7 +63,7 @@ class ViewDataPage extends StatelessWidget {
                             child: Row(
                               children: <Widget>[
                                 Image.asset(
-                                  'images/remote.png',
+                                  'images/humidity.png',
                                   height: 40,
                                   width: 40,
                                 ),
@@ -95,7 +95,7 @@ class ViewDataPage extends StatelessWidget {
                             child: Row(
                               children: <Widget>[
                                 Image.asset(
-                                  'images/remote.png',
+                                  'images/idea.png',
                                   height: 40,
                                   width: 40,
                                 ),
@@ -119,7 +119,7 @@ class ViewDataPage extends StatelessWidget {
                             child: Row(
                               children: <Widget>[
                                 Image.asset(
-                                  'images/remote.png',
+                                  'images/distance.png',
                                   height: 40,
                                   width: 40,
                                 ),
