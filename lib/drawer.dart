@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mobile_controller/send_command.dart';
 import 'package:mobile_controller/view_data_page.dart';
 import 'package:mobile_controller/home_page.dart';
-import 'package:mobile_controller/send_command.dart';
 
 class NavDrawer extends StatelessWidget {
   const NavDrawer({ Key? key }) : super(key: key);
@@ -33,13 +32,6 @@ class NavDrawer extends StatelessWidget {
               currentAccountPicture: Image.asset('images/man.png'),
             ),
             ListTile(
-              // leading: CircleAvatar(
-              //   backgroundColor:Colors.blue,
-              //   child: Text(
-              //     "H",
-              //     style: TextStyle(fontSize: 30.0),
-              //   ),
-              // ),
               leading : Image.asset(
                 'images/garage.png',
                 height: 40,
@@ -66,23 +58,18 @@ class NavDrawer extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: CircleAvatar(
-                backgroundColor:Colors.blue,
-                child: Text(
-                  "S",
-                  style: TextStyle(fontSize: 30.0),
-                ),
+              leading: Image.asset(
+                'images/remote.png',
+                height: 40,
+                width: 40,
               ),
-              // leading: Image.asset(
-              //   'images/remote.png',
-              //   height: 40,
-              //   width: 40,
-              // ),
               title: const Text('Send Command'),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => SendCommand()));
+                  builder: (BuildContext context) => SendCommand()
+                  )
+                );
               },
             ),
             Divider(),

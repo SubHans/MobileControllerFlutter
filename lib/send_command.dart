@@ -10,7 +10,7 @@ class SendCommand extends StatelessWidget {
       appBar: AppBar(title: Text("Te-Fa App")),
       body: SafeArea(
           child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.all(20),
               child: Column(
                 children: <Widget>[
                   Container(
@@ -34,7 +34,7 @@ class SendCommand extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10),
-                    color: Colors.amber,
+                    color: Colors.yellow[400],
                     child: Column(
                       children: <Widget>[
                         Align(
