@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               ClipRRect(
-                borderRadius: BorderRadius.circular(40.0),
+                borderRadius: BorderRadius.circular(10.0),
                 child: Container(
                   color: Colors.blue[50],
                   margin: EdgeInsets.all(10),
