@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_controller/send_command.dart';
+import 'package:mobile_controller/setting_page.dart';
 import 'package:mobile_controller/user_page.dart';
 import 'package:mobile_controller/view_data_page.dart';
 import 'package:mobile_controller/home_page.dart';
@@ -88,10 +89,9 @@ class NavDrawer extends StatelessWidget {
             ),
             title: const Text('Settings'),
             onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => SettingPage()));
             },
           ),
         ],
