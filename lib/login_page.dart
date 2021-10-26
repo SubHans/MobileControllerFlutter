@@ -8,7 +8,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
+          child: SafeArea(
         child: Container(
           margin: EdgeInsets.all(20),
           child: Column(
@@ -27,7 +28,7 @@ class LoginPage extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      )),
     );
   }
 }
